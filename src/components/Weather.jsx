@@ -4,6 +4,7 @@ import sunnyBg from "@/assets/sunny.jpeg"
 import nightBg from "@/assets/night-bg.jpg"
 import cloudBg from "@/assets/cloud-bg.jpeg"
 import rainBg from "@/assets/rain-bg.jpeg"
+import mistBg from "@/assets/mist-bg.jpeg"
 
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
@@ -37,9 +38,10 @@ const Weather = () => {
     const getWeatherStyle = (condition, isDay) => {
         if (condition.includes("sunny") && isDay) return sunnyBg;
         if (condition.includes("clear") && !isDay) return nightBg;
-        if (condition.includes("cloud")) return cloudBg;
+        if (condition.includes("mist") || condition.includes("fog") || condition.includes("haze")) return mistBg;        if (condition.includes("cloud")) return cloudBg;
         if (condition.includes("rain")) return rainBg;
-
+        
+        return sunnyBg;
     }
 
     //   useEffect(()=>{
