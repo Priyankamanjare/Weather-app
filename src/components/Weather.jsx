@@ -27,7 +27,7 @@ const Weather = () => {
         }
         try {
             const res = await axios.get(
-                `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`
+                `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`
             );
             setWeather(res.data)
         } catch (error) {
