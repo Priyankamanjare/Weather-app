@@ -70,7 +70,7 @@ const Weather = () => {
                     backgroundImage: backgroundImage
                 }}
             >
-                <div className='flex flex-col items-center justify-center p-4 text-slate-50 lg:w-1/2
+                <div className='flex flex-col items-center justify-center p-4 text-slate-50 lg:w-1/2 shadow-2xl shadow-amber-50
                 lg:h-full bg-white-700 rounded-md bg-clip-padding backdrop-opacity-100 backdrop-blur-sm bg-opacity-70 border border-gray-100'>
                     <input type='text'
                         placeholder='Enter a city'
